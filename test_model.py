@@ -9,8 +9,8 @@ from pycoral.adapters import detect
 from pycoral.utils.dataset import read_label_file
 
 LABELS_FILENAME = 'labels.txt'
-TFLITE_FILENAME = 'efficientdet1-lite-gestures.tflite'
-INPUT_IMAGE = 'dataset/images/gestback_121.jpg'
+TFLITE_FILENAME = 'efficientdet0-lite-gestures.tflite'
+INPUT_IMAGE = 'split-dataset/train/images/gestback_100.jpg'
 
 def draw_objects(draw, objs, scale_factor, labels):
   """Draws the bounding box and label for each object."""

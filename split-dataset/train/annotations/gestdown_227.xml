@@ -1,0 +1,26 @@
+<annotation>
+	<folder>GestDown</folder>
+	<filename>gestdown_227.jpg</filename>
+	<path>/home/michal.piotrowski/workspace/TensorFlow/ImageDataSets/MyImages/Gestures4/train/GestDown/gestdown_227.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>480</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>GestDown</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>257</xmin>
+			<ymin>442</ymin>
+			<xmax>423</xmax>
+			<ymax>626</ymax>
+		</bndbox>
+	</object>
+</annotation>

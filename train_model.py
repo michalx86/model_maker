@@ -12,11 +12,11 @@ assert tf.__version__.startswith('2')
 
 # Set this depending on model you train, processor used for training / evaluation: CPU / GPU, memory available (CPU RAM / GPU memory)
 BATCH_SIZE = 2
-EPOCHS = 750
+EPOCHS = 50
 
 # Your labels map as a dictionary (zero is reserved):
-label_map = {1: 'GestUp', 2: 'GestDown', 3: 'GestLeft', 4: 'GestRight', 5: 'GestOk', 6: 'GestBack', 7: 'GestExit', 8: 'GestMenu', 9: 'GestPause', 10: 'Man', 11: 'Face'}
-
+#label_map = {1: 'GestUp', 2: 'GestDown', 3: 'GestLeft', 4: 'GestRight', 5: 'GestOk', 6: 'GestBack', 7: 'GestExit', 8: 'GestMenu', 9: 'GestPause', 10: 'Man', 11: 'Face'}
+label_map = {1: 'GestDown', 2: 'GestBack'}
 
 
 
