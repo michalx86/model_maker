@@ -1,0 +1,26 @@
+<annotation>
+	<folder>GestBack</folder>
+	<filename>gestback_117.jpg</filename>
+	<path>/home/michal.piotrowski/workspace/TensorFlow/ImageDataSets/MyImages/Gestures3/train/GestBack/gestback_117.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>480</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>GestBack</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>21</xmin>
+			<ymin>461</ymin>
+			<xmax>310</xmax>
+			<ymax>611</ymax>
+		</bndbox>
+	</object>
+</annotation>
