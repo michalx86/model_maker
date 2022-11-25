@@ -55,13 +55,18 @@ width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 
 while cap.isOpened(): 
-    ret, frame = cap.read()
-    image_np = np.array(frame)
-    image = Image.fromarray(image_np)
+    ret, frame_bgr = cap.read()
+
+    frame_rgb = cv2.cvtColor(frame,cv2.COLOR_BGR2RGB)
+    image_rgb = Image.fromarray(np.array(frame_rgb))
+    #image_rgb.show()
+
+    image = Image.fromarray(np.array(frame_bgr))
+    #image.show()
 
     # Resize the image for input
     _, scale = common.set_resized_input(
-        interpreter, image.size, lambda size: image.resize(size, Image.Resampling.LANCZOS))
+        interpreter, image_rgb.size, lambda size: image_rgb.resize(size, Image.Resampling.LANCZOS))
 
     # Run inference
     interpreter.invoke()
@@ -74,7 +79,7 @@ while cap.isOpened():
     image = image.resize((display_width, int(display_width * height_ratio)))
     draw_objects(ImageDraw.Draw(image), objs, scale_factor, labels)
     cv2.imshow('object detection',  np.asarray(image))
-    
+
     if cv2.waitKey(10) & 0xFF == ord('q'):
         cap.release()
         cv2.destroyAllWindows()
