@@ -57,7 +57,7 @@ height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 while cap.isOpened(): 
     ret, frame_bgr = cap.read()
 
-    frame_rgb = cv2.cvtColor(frame,cv2.COLOR_BGR2RGB)
+    frame_rgb = cv2.cvtColor(frame_bgr,cv2.COLOR_BGR2RGB)
     image_rgb = Image.fromarray(np.array(frame_rgb))
     #image_rgb.show()
 
